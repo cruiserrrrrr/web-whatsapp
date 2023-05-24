@@ -24,16 +24,8 @@ const ChatComponent = () => {
     const { addMessage } = userSlice.actions;
     const dispatch = useDispatch();
 
-    // const idInstance = '1101823945';
-    // const apiTokenInstance = '4d4cb43f4a8948cdb49859a7d9bbd9178fd329d0ae0e49b3b9';
-
-
-
-
     const sendMessage = async (e) => {
         e.preventDefault();
-        // 79109578721
-        // 79969302440
         const outgoingData = {
             chatId: `${location.state.chatPhone}@c.us`,
             message: textMessage
@@ -51,6 +43,7 @@ const ChatComponent = () => {
         }
 
     }
+
     useEffect(() => {
         chats.filter((item) => {
             if (item.id === location.state.chatId) {
@@ -58,6 +51,7 @@ const ChatComponent = () => {
             }
         })
     }, [location.state.chatId])
+
     useEffect(() => {
         const longPolling = async () => {
             let restAPI = whatsAppClient.restAPI(({
@@ -65,7 +59,6 @@ const ChatComponent = () => {
                 apiTokenInstance
             }))
             try {
-                console.log("Waiting incoming notifications...")
                 let response = await restAPI.webhookService.receiveNotification();
                 if (response !== null) {
                     let webhookBody = response.body;
@@ -104,6 +97,7 @@ const ChatComponent = () => {
             clearInterval(getInterval)
         };
     }, [location.state.chatId])
+    
     useEffect(() => {
         if (chats.length <= 0) {
             navigate("/")

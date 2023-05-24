@@ -1,0 +1,23 @@
+.input_wrapper {
+    width: 100%;
+    max-width: 440px;
+    outline: none;
+    padding: 9px 12px;
+    background-color: var(--compose-background);
+    border: 1px solid var(--compose-border);
+    color: var(--butterbar-primary);
+    font-size: 16px;
+    font-weight: 400;
+    border: none;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.input_wrapper::placeholder {
+    font-size: 14px;
+    color: var(--secondary);
+    font-weight: 300;
+}

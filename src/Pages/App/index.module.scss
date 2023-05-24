@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --butterbar-primary: #e9edef;
+    --secondary: #8696a0;
+    --secondary-stronger: #d1d7db;
+    --intro-background: #222e35;
+    --background-default: #111b21;
+    --unread-marker-background: #00a884;
+    --compose-background: #2a3942;
+    --compose-border: #2a3942;
+    --incoming-background: #202c33;
+    --icon: #8696a0;
+    --incoming-background: #202c33;
+    --outgoing-background: #005c4b;
+    
+    --font-family-consolas: Consolas;
+}
+
+*,
+::after,
+::before {
+    margin: 0 0;
+    padding: 0 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--intro-background) var(--background-default);
+}
+
+*::-webkit-scrollbar {
+    width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--background-default);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--intro-background);
+    border-radius: 20px;
+}
+
+body {
+    background-color: var(--background-default);
+    color: var(--butterbar-primary);
+    font-family: var(--font-family-consolas);
+    background-position: 100%;
+}
+
+.app {
+
+    .content_wrapper {
+        display: flex;
+    }
+}

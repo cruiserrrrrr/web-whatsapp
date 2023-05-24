@@ -1,5 +1,5 @@
 {
-  "name": "clear-app",
+  "name": "green-api-testovoe",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -86,18 +86,9 @@
     ]
   },
   "scripts": {
-    "docker:build": "npm run predeploy && docker build --no-cache -t pavser/env-lk-front .",
-    "docker:push": "docker push pavser/env-lk-front",
-    "docker:ci": "npm run docker:build && npm run docker:push",
-    "predeploy": "npm run build",
-    "deploy": "npm run build&&gh-pages -d build",
     "start": "set HTTPS=true&&set && webpack serve --open --config config/webpack.dev.js",
-    "build": "webpack --config config/webpack.prod.js",
-    "eslint:write": "eslint --config .eslintrc.json --fix",
-    "stylelint:write": "stylelint --config .stylelintrc.json **/*.scss --fix",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build": "webpack --config config/webpack.prod.js"
   },
-  "author": "danilanuzhdov",
+  "author": "Danila Nuzhdov aka cruiserrrrrr",
   "license": "ISC"
 }

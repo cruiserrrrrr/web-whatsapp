@@ -24,16 +24,9 @@ const ChatComponent = () => {
     const { addMessage } = userSlice.actions;
     const dispatch = useDispatch();
 
-    // const idInstance = '1101823945';
-    // const apiTokenInstance = '4d4cb43f4a8948cdb49859a7d9bbd9178fd329d0ae0e49b3b9';
-
-
-
 
     const sendMessage = async (e) => {
         e.preventDefault();
-        // 79109578721
-        // 79969302440
         const outgoingData = {
             chatId: `${location.state.chatPhone}@c.us`,
             message: textMessage
